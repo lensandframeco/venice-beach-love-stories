@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  VENICE BEACH LOVE STORIES - Design System
+  Aesthetic: Sun-faded California, documentary film, warm weathered textures
+  Colors: Sand, terracotta, ocean slate, sunset amber
+*/
+
+@layer base {
+  :root {
+    /* Core palette - warm, sun-faded California */
+    --background: 45 20% 96%;
+    --foreground: 25 15% 15%;
+
+    --card: 45 25% 98%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 45 25% 98%;
+    --popover-foreground: 25 15% 15%;
+
+    /* Primary - Deep ocean slate */
+    --primary: 210 25% 25%;
+    --primary-foreground: 45 30% 95%;
+
+    /* Secondary - Warm sand */
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 25 15% 20%;
+
+    /* Muted - Faded tones */
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 10% 45%;
+
+    /* Accent - Sunset amber/terracotta */
+    --accent: 25 70% 50%;
+    --accent-foreground: 45 30% 98%;
+
+    /* Film-inspired tones */
+    --terracotta: 15 60% 45%;
+    --ocean: 200 35% 40%;
+    --sand: 40 35% 85%;
+    --sunset: 30 85% 55%;
+    --dusk: 220 30% 20%;
+
+    /* Text overlays */
+    --overlay-dark: 25 20% 8%;
+    --overlay-light: 45 30% 98%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 45 30% 98%;
+
+    --border: 35 20% 85%;
+    --input: 35 20% 85%;
+    --ring: 25 70% 50%;
+
+    --radius: 0.25rem;
+
+    /* Sidebar tokens (not heavily used) */
+    --sidebar-background: 45 20% 96%;
+    --sidebar-foreground: 25 15% 25%;
+    --sidebar-primary: 210 25% 25%;
+    --sidebar-primary-foreground: 45 30% 95%;
+    --sidebar-accent: 35 30% 90%;
+    --sidebar-accent-foreground: 25 15% 20%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 25 70% 50%;
+  }
+
+  .dark {
+    --background: 25 20% 8%;
+    --foreground: 45 20% 92%;
+
+    --card: 25 18% 12%;
+    --card-foreground: 45 20% 92%;
+
+    --popover: 25 18% 12%;
+    --popover-foreground: 45 20% 92%;
+
+    --primary: 45 25% 90%;
+    --primary-foreground: 25 20% 10%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 45 20% 90%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 15% 55%;
+
+    --accent: 25 70% 55%;
+    --accent-foreground: 25 20% 8%;
+
+    --terracotta: 15 55% 55%;
+    --ocean: 200 30% 50%;
+    --sand: 40 25% 25%;
+    --sunset: 30 80% 60%;
+    --dusk: 220 25% 15%;
+
+    --overlay-dark: 25 20% 5%;
+    --overlay-light: 45 25% 95%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 30% 98%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 25 70% 55%;
+
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 45 20% 90%;
+    --sidebar-primary: 45 25% 90%;
+    --sidebar-primary-foreground: 25 20% 10%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 45 20% 90%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 25 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  /* Hero text overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      hsl(var(--overlay-dark) / 0.85) 0%,
+      hsl(var(--overlay-dark) / 0.4) 50%,
+      hsl(var(--overlay-dark) / 0.2) 100%
+    );
+  }
+
+  /* Cinematic text shadow */
+  .text-shadow-cinematic {
+    text-shadow: 0 2px 20px hsl(var(--overlay-dark) / 0.6),
+                 0 1px 3px hsl(var(--overlay-dark) / 0.4);
+  }
+
+  /* Film grain texture overlay */
+  .film-grain {
+    position: relative;
+  }
+  
+  .film-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  /* Section divider line */
+  .section-divider {
+    @apply w-16 h-px bg-accent mx-auto;
+  }
+
+  /* Story card hover effect */
+  .story-card {
+    @apply relative overflow-hidden transition-all duration-500;
+  }
+
+  .story-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-overlay-dark/80 via-overlay-dark/20 to-transparent opacity-60 transition-opacity duration-500;
+  }
+
+  .story-card:hover::before {
+    @apply opacity-90;
+  }
+
+  /* Elegant link underline */
+  .link-underline {
+    @apply relative inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Quote styling */
+  .pull-quote {
+    @apply relative pl-6 border-l-2 border-accent italic;
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  /* Page section spacing */
+  .page-section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Dramatic vertical rhythm sections */
+  .section-dramatic {
+    @apply min-h-screen flex flex-col justify-center py-20 md:py-32;
+  }
+
+  .section-tall {
+    @apply min-h-[80vh] flex flex-col justify-center py-16 md:py-24;
+  }
+
+  .section-chapter {
+    @apply min-h-[70vh] py-20 md:py-32;
+  }
+
+  /* Container with cinematic wide margins */
+  .container-cinematic {
+    @apply max-w-6xl mx-auto px-6 md:px-12;
+  }
+
+  /* Breathing typography */
+  .text-breathe {
+    @apply leading-loose tracking-wide;
+    line-height: 2;
+  }
+
+  .text-editorial {
+    @apply leading-relaxed;
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+  }
+
+  /* Hero heights */
+  .hero-full {
+    @apply min-h-screen;
+  }
+
+  .hero-tall {
+    @apply min-h-[80vh];
+  }
+
+  .hero-medium {
+    @apply min-h-[70vh];
+  }
+
+  /* Cinematic Scroll Journey - Snap Scrolling */
+  .snap-container {
+    /* Framer Motion needs a non-static positioned scroll container to measure offsets reliably */
+    @apply relative h-screen overflow-y-auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Allow touch devices to pan naturally in both axes */
+    touch-action: pan-x pan-y;
+  }
+
+  .snap-container--no-snap {
+    scroll-snap-type: none;
+    /* While the horizontal Stories section is active, avoid clipping translated content */
+    overflow-x: visible;
+  }
+
+  .snap-section {
+    @apply min-h-screen w-full flex flex-col justify-center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .snap-section-content {
+    @apply min-h-[50vh] w-full flex flex-col justify-center;
+    scroll-snap-align: start;
+  }
+
+  /* Horizontal Scroll System */
+  .horizontal-scroll-container {
+    @apply relative;
+    /* Height is now driven by the snap-step children, not a fixed value */
+    /* Ensure touch gestures aren't blocked by an ancestor's gesture handling */
+    touch-action: pan-x pan-y;
+    /* Prevent clipping of the translated horizontal track on iOS/Safari */
+    overflow-x: visible;
+  }
+
+  .scroll-snap-align-start {
+    scroll-snap-align: start;
+  }
+
+  /* Snap sentinel blocks inside horizontal scroll region */
+  .horizontal-scroll-snap-step {
+    @apply h-screen w-full;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    pointer-events: none;
+  }
+
+  .horizontal-scroll-item {
+    @apply w-[80vw] max-w-4xl h-[70vh] flex-shrink-0;
+  }
+
+  /* Defensive: ensure all direct children in the horizontal track cannot shrink */
+  .horizontal-scroll-container .horizontal-scroll-item {
+    flex-shrink: 0;
+  }
+
+  /* Film Strip Aesthetic */
+  .film-strip {
+    @apply relative;
+  }
+
+  .film-strip::before,
+  .film-strip::after {
+    content: '';
+    @apply absolute left-0 right-0 h-8 bg-overlay-dark z-10;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      hsl(var(--overlay-dark)) 20px,
+      hsl(var(--overlay-dark)) 24px,
+      transparent 24px,
+      transparent 44px
+    );
+  }
+
+  .film-strip::before {
+    @apply top-0;
+  }
+
+  .film-strip::after {
+    @apply bottom-0;
+  }
+
+  /* Cinematic Reveal Animations */
+  .reveal-on-scroll {
+    @apply opacity-0 translate-y-8;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-on-scroll.revealed {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Cinematic Fade */
+  .cinematic-fade {
+    animation: cinematicFade 1.5s ease-out forwards;
+  }
+
+  @keyframes cinematicFade {
+    0% {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Parallax Layers */
+  .parallax-slow {
+    will-change: transform;
+  }
+
+  .parallax-medium {
+    will-change: transform;
+  }
+
+  .parallax-fast {
+    will-change: transform;
+  }
+
+  /* Chapter Number Styling */
+  .chapter-number {
+    @apply fixed top-1/2 right-8 -translate-y-1/2 z-40;
+    @apply font-serif text-8xl text-overlay-light/10;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* Immersive Image Container */
+  .immersive-image {
+    @apply relative w-full h-full overflow-hidden;
+  }
+
+  .immersive-image img {
+    @apply w-full h-full object-cover;
+    transition: transform 8s ease-out;
+  }
+
+  .immersive-image:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Story Navigation Dots */
+  .story-nav-dots {
+    @apply fixed right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-3;
+  }
+
+  .story-nav-dot {
+    @apply w-2 h-2 rounded-full bg-overlay-light/30 transition-all duration-300;
+  }
+
+  .story-nav-dot.active {
+    @apply bg-accent h-8;
+  }
+
+  /* Full Bleed Image */
+  .full-bleed {
+    @apply w-screen relative;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+
+@layer utilities {
+  /* Custom text colors using design tokens */
+  .text-terracotta {
+    color: hsl(var(--terracotta));
+  }
+
+  .text-ocean {
+    color: hsl(var(--ocean));
+  }
+
+  .text-sand {
+    color: hsl(var(--sand));
+  }
+
+  .text-sunset {
+    color: hsl(var(--sunset));
+  }
+
+  .text-dusk {
+    color: hsl(var(--dusk));
+  }
+
+  .text-overlay-light {
+    color: hsl(var(--overlay-light));
+  }
+
+  .text-overlay-dark {
+    color: hsl(var(--overlay-dark));
+  }
+
+  /* Background colors */
+  .bg-terracotta {
+    background-color: hsl(var(--terracotta));
+  }
+
+  .bg-ocean {
+    background-color: hsl(var(--ocean));
+  }
+
+  .bg-sand {
+    background-color: hsl(var(--sand));
+  }
+
+  .bg-sunset {
+    background-color: hsl(var(--sunset));
+  }
+
+  .bg-dusk {
+    background-color: hsl(var(--dusk));
+  }
+
+  .bg-overlay-dark {
+    background-color: hsl(var(--overlay-dark));
+  }
+
+  .bg-overlay-light {
+    background-color: hsl(var(--overlay-light));
+  }
+
+  /* Border colors */
+  .border-terracotta {
+    border-color: hsl(var(--terracotta));
+  }
+
+  .border-accent {
+    border-color: hsl(var(--accent));
+  }
+}

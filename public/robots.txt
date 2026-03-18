@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.makeitglow.co/sites/venice-beach-love-stories/sitemap.xml
