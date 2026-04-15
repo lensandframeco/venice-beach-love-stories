@@ -4,7 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { stories } from "@/data/stories";
-import heroSilhouettes from "@/assets/hero-silhouettes-sunset.jpeg";
+const heroSilhouettes = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/ece97169-fa7f-42ee-b7ce-e4a5c444a21e.jpg";
 const Stories = () => {
   return <div className="snap-container">
       <ScrollProgress />

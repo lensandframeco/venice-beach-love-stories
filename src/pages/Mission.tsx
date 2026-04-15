@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import heroStorm from "@/assets/hero-storm-beach.jpeg";
-import image9 from "@/assets/gallery/image9.jpeg";
-import image70 from "@/assets/gallery/image70.jpeg";
-import image73 from "@/assets/gallery/image73.jpeg";
-import image25 from "@/assets/gallery/image25.jpeg";
-import image51 from "@/assets/gallery/image51.jpeg";
-import image7 from "@/assets/gallery/image7.jpg";
-import image21 from "@/assets/gallery/image21.jpeg";
-import image30 from "@/assets/gallery/image30.jpeg";
-import image4 from "@/assets/gallery/image4.jpg";
-import image27 from "@/assets/gallery/image27.jpeg";
+const heroStorm = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/b95af60b-e68a-4df8-a7ca-f9ec3d16b50d.jpg";
+const image9 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/ab5fbed1-c01d-428a-8537-f94357647cfc.jpg";
+const image70 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/5c918769-571b-4825-9668-93d8e2adf5ce.jpg";
+const image73 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/71281cf7-5719-4df0-bd42-e6bb75ec2815.jpg";
+const image25 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/0df0e06f-dcaa-455b-99b3-19cf605e1225.jpg";
+const image51 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/d4691f60-3d1f-404c-80cf-bbf7ff57ccb7.jpg";
+const image7 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/5815b038-39b5-47f1-8b46-5d54222e1802.jpg";
+const image21 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/1a44e60e-ebc0-41b2-82f5-b91f6cf8701c.jpg";
+const image30 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/d5a497f8-a65b-488e-8edd-6c92f70bbb14.jpg";
+const image4 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/3627317f-4a30-4d05-8f65-d1c2ca620cbb.jpg";
+const image27 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/cc51334b-c465-42a7-9393-d2a4589a5d5c.jpg";
 const Mission = () => {
   return <div className="snap-container">
       <ScrollProgress />
@@ -72,7 +72,7 @@ const Mission = () => {
                 Venice Beach Love Stories
               </h2>
               <div className="space-y-6 text-lg md:text-xl text-foreground/85 leading-relaxed">
-                <p><em>Venice Beach Love Stories</em> is a documentary series that enters into the complexity of Los Angeles's most mythologized neighborhood—not through statistics, but through the lives of five people whose stories carry the truth of this place.</p>
+                <p><em>Venice Beach Love Stories</em> is a documentary series by Kerry Candaele that enters into the complexity of Los Angeles's most mythologized neighborhood—not through statistics, but through the lives of five people whose stories carry the truth of this place.</p>
                 <p>For starters, we find a Chilean muralist who turns walls into testimony. A community elder and activist preserving Oakwood's history. A young skateboarder carrying forward Dogtown's legacy. A zoot-suit-wearing Latino whose daily dress is an act of cultural resilience, and an African-American local who keeps Venice moving with his Bicycle Whisperer moving repair shop. </p>
               </div>
             </motion.div>

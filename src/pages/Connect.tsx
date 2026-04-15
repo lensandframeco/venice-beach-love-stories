@@ -4,11 +4,11 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import heroFoggy from "@/assets/hero-foggy-beach.jpeg";
+const heroFoggy = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/077e21ca-0e06-461a-aef7-3c88304c013d.jpg";
 
-import image14 from "@/assets/gallery/image14.jpeg";
-import image20 from "@/assets/gallery/image20.jpeg";
-import image24 from "@/assets/gallery/image24.jpeg";
+const image14 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/b0adf99b-1b75-4014-b328-6e1b3dc90405.jpg";
+const image20 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/752aa850-4a68-441d-94f3-9fdb0f341a93.jpg";
+const image24 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/f60c6144-a99d-4ed0-b627-c4653ba45030.jpg";
 
 const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: '#' },

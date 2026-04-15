@@ -1,8 +1,8 @@
 // Story data for the documentary subjects
-import ivoHero from "@/assets/ivo-hero.jpeg";
-import jataunHero from "@/assets/jataun-hero.jpg";
-import titoHero from "@/assets/tito-hero.jpg";
-import lanceHero from "@/assets/lance-hero.jpeg";
+const ivoHero = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/41565544-2791-4dda-8331-c4d149cd1473.jpg";
+const jataunHero = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/5fc28b46-0704-411b-a562-b43adb6e09dc.jpg";
+const titoHero = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/469dbf25-f03b-415a-a1dd-dda0a583f3fa.jpg";
+const lanceHero = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/473f475c-3f25-4975-b78f-6b1ef0bf94cf.jpg";
 
 export interface Story {
   slug: string;

@@ -6,10 +6,10 @@ import { Footer } from "@/components/Footer";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { stories } from "@/data/stories";
-import heroImage from "@/assets/venice-sign-hero.png";
-import heroImageMobile from "@/assets/vbls-mobile.jpg";
-import kerryWide from "@/assets/kerry-wide.jpg";
-import heroSunsetBlur from "@/assets/hero-sunset-blur.jpeg";
+const heroImage = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/80a9dba4-b9b4-4ffb-a429-3802fcfb6390.png";
+const heroImageMobile = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/ac5b623e-456b-464d-87c1-e1a3f981f11e.jpg";
+const kerryWide = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/9abe69bf-06f9-4623-b0f5-4697e36bcdbf.jpg";
+const heroSunsetBlur = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/304588ed-23cb-42b0-80d9-6be0b5f7ca33.jpg";
 import { useIsMobile } from "@/hooks/use-mobile";
 const Index = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -223,7 +223,7 @@ const Index = () => {
             duration: 1,
             delay: 1.5
           }} className="text-overlay-light/60 text-base sm:text-lg md:text-xl mb-6 sm:mb-8 md:mb-16 max-w-2xl mx-auto">
-              A documentary series about art, memory, and lived experience in Venice Beach
+              A documentary series by Kerry Candaele about art, memory, and lived experience in Venice Beach
             </motion.p>
             <motion.div initial={{
             opacity: 0,
@@ -280,7 +280,7 @@ const Index = () => {
             <span className="block text-xs uppercase tracking-[0.4em] text-accent mb-8">
               Venice Beach Love Stories
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-overlay-light leading-tight mb-12 max-w-5xl mx-auto">These are stories about love—love of place, of community, of art, and a way of life under threat. .</h2>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-overlay-light leading-tight mb-12 max-w-5xl mx-auto">These are stories about love—love of place, of community, of art, and a way of life under threat.</h2>
             <p className="text-overlay-light/50 text-xl max-w-2xl mx-auto">
               Love that holds on even as the ground shifts beneath it.
             </p>
@@ -300,7 +300,7 @@ const Index = () => {
               The Stories
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl">
-              Five people. Five ways of holding on. In a neighborhood where belonging 
+              Five people. Five ways of holding on. A neighborhood where belonging 
               must constantly be re-asserted.
             </p>
           </motion.div>

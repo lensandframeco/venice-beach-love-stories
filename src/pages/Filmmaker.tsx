@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import kerryWide from "@/assets/kerry-wide.jpg";
-import image16 from "@/assets/gallery/image16.jpeg";
-import image18 from "@/assets/gallery/image18.jpeg";
-import image31 from "@/assets/gallery/image31.jpeg";
-import image32 from "@/assets/gallery/image32.jpeg";
+const kerryWide = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/9abe69bf-06f9-4623-b0f5-4697e36bcdbf.jpg";
+const image16 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/d7ab3c50-4d62-418d-b847-27dfc2839961.jpg";
+const image18 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/76d54f9f-85aa-4c80-ac1c-594731c7828c.jpg";
+const image31 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/91fff89d-ea77-4243-a21f-4cc2f7bf0681.jpg";
+const image32 = "https://images.makeitglow.co/projects/cmmu4z6bh0002t3t21i7j9pyt/0e8f6a74-12df-4475-8d74-317a55126c12.jpg";
 const films = [{
   title: "Following the Ninth",
   subtitle: "In the Footsteps of Beethoven's Final Symphony",
