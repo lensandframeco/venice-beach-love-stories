@@ -13,4 +13,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://www.makeitglow.co/sites/venice-beach-love-stories/sitemap.xml
+Sitemap: https://www.venicebeachlovestories.com/sitemap.xml
